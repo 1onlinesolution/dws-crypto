@@ -1,0 +1,57 @@
+{
+  "name": "@1onlinesolution/dws-crypto",
+  "version": "0.0.1",
+  "description": "Security tools for the web",
+  "main": "index.js",
+  "scripts": {
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "lint": "eslint *.js lib/**/*.js",
+    "test": "NODE_ENV=test mocha",
+    "coverage": "nyc --reporter=lcov --reporter=text --report-dir=./coverage --temp-dir=/Users/ioannis/tmp/.nyc_output npm run test",
+    "coverage-clean": "rm -rf ./coverage & rm -rf ./.nyc_output"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1onlinesolution/dws-crypto.git"
+  },
+  "author": "1onlinesolution",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/1onlinesolution/dws-crypto/issues"
+  },
+  "homepage": "https://github.com/1onlinesolution/dws-crypto#readme",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^7.28.0",
+    "eslint-plugin-security": "^1.4.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.3.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "mocha": {
+    "watch-files": [
+      "test/**/*.spec.js"
+    ],
+    "watch-ignore": [
+      "node_modules"
+    ],
+    "extension": [
+      "js"
+    ],
+    "slow": "2000=",
+    "timeout": "20000",
+    "reporter": "spec",
+    "require": "dotenv/config",
+    "recursive": "true",
+    "exit": "true"
+  }
+}

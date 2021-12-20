@@ -1,6 +1,6 @@
 {
   "name": "@1onlinesolution/dws-crypto",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Security tools for the web",
   "main": "index.js",
   "scripts": {
